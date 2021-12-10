@@ -7,7 +7,7 @@ import java.io.LineNumberReader;
 public class Hack {
 
     public Hack() {
-        String cmd = "who && pwd && ls -la && echo 'Your all of data is delete'";
+        String cmd = "echo 'Run `uname -a`' && uname -a";
         try {
             String[] cmdA = {"/bin/sh", "-c", cmd};
             Process process = Runtime.getRuntime().exec(cmdA);
