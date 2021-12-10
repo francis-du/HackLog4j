@@ -7,7 +7,11 @@ import java.io.LineNumberReader;
 public class Hack {
 
     public Hack() {
-        String cmd = "echo 'Run `uname -a`' && uname -a";
+        String cmd = "echo '-------------- Start Hack -------------------' " +
+                "&& echo 'Your OS: '$(uname)" +
+                "&& echo 'Your Disk: ' && df -h" +
+                "&& curl wttr.in/Beijing " +
+                "&& echo '------------ Your PC has been hacked ----------------' ";
         try {
             String[] cmdA = {"/bin/sh", "-c", cmd};
             Process process = Runtime.getRuntime().exec(cmdA);
